@@ -12,7 +12,7 @@ COPY cuda.repo /etc/yum.repos.d/cuda.repo
 ENV CUDA_VERSION 8.0
 LABEL com.nvidia.cuda.version="8.0"
 
-ENV CUDA_PKG_VERSION 8-0-8.0.44-1
+ENV CUDA_PKG_VERSION 8-0-8.0.61-1
 RUN yum install -y \
         cuda-nvrtc-$CUDA_PKG_VERSION \
         cuda-nvgraph-$CUDA_PKG_VERSION \
