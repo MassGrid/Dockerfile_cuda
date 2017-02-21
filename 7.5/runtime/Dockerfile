@@ -9,8 +9,8 @@ RUN NVIDIA_GPGKEY_SUM=d1be581509378368edeec8c1eb2958702feedf3bc3d17011adbf24efac
 
 COPY cuda.repo /etc/yum.repos.d/cuda.repo
 
-ENV CUDA_VERSION 7.5
-LABEL com.nvidia.cuda.version="7.5"
+ENV CUDA_VERSION 7.5.18
+LABEL com.nvidia.cuda.version="${CUDA_VERSION}"
 
 ENV CUDA_PKG_VERSION 7-5-7.5-18
 RUN yum install -y \
@@ -22,7 +22,7 @@ RUN yum install -y \
         cuda-cusparse-$CUDA_PKG_VERSION \
         cuda-npp-$CUDA_PKG_VERSION \
         cuda-cudart-$CUDA_PKG_VERSION && \
-    ln -s cuda-$CUDA_VERSION /usr/local/cuda && \
+    ln -s cuda-7.5 /usr/local/cuda && \
     rm -rf /var/cache/yum/*
 
 RUN echo "/usr/local/cuda/lib64" >> /etc/ld.so.conf.d/cuda.conf && \
