@@ -5,7 +5,7 @@ services:
 
 variables:
     REPOSITORY: "${CI_PROJECT_NAMESPACE}/${CI_PROJECT_NAME}"
-    OS: "${CI_BUILD_REF_NAME}"
+    OS: "${CI_COMMIT_REF_NAME}"
 
 before_script:
     - docker login -u "${REGISTRY_USER}" -p "${REGISTRY_TOKEN}"
@@ -17,10 +17,10 @@ stages:
 .cuda_template: &cuda_definition
     stage: cuda
     script:
-    - VERSION="${CI_BUILD_NAME:1}"
+    - VERSION="${CI_JOB_NAME:1}"
     - docker build --pull -t "${REPOSITORY}:${VERSION}-runtime-${OS}"
-                   --label "com.nvidia.build.ref=${CI_BUILD_REF}"
-                   --label "com.nvidia.build.id=${CI_BUILD_ID}" "${VERSION}/runtime"
+                   --label "com.nvidia.build.ref=${CI_COMMIT_SHA}"
+                   --label "com.nvidia.build.id=${CI_JOB_ID}" "${VERSION}/runtime"
     - docker build -t "${REPOSITORY}:${VERSION}-devel-${OS}" "${VERSION}/devel"
     - if [[ "${NO_OS_SUFFIX}" == true ]]; then
           docker tag "${REPOSITORY}:${VERSION}-runtime-${OS}" "${REPOSITORY}:${VERSION}-runtime";
@@ -34,9 +34,9 @@ stages:
 .cudnn_template: &cudnn_definition
     stage: cudnn
     script:
-    - VERSION="${CI_BUILD_NAME:1}"
-    - CUDA_VERSION="${CI_BUILD_NAME:1:3}"
-    - CUDNN_VERSION="${CI_BUILD_NAME:5}"
+    - VERSION="${CI_JOB_NAME:1}"
+    - CUDA_VERSION="${CI_JOB_NAME:1:3}"
+    - CUDNN_VERSION="${CI_JOB_NAME:5}"
     - docker build --pull -t "${REPOSITORY}:${VERSION}-runtime-${OS}" "${CUDA_VERSION}/runtime/${CUDNN_VERSION}"
     - docker build --pull -t "${REPOSITORY}:${VERSION}-devel-${OS}" "${CUDA_VERSION}/devel/${CUDNN_VERSION}"
     - if [[ "${NO_OS_SUFFIX}" == true ]]; then
