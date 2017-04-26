@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         cuda-nvrtc-$CUDA_PKG_VERSION \
         cuda-nvgraph-$CUDA_PKG_VERSION \
         cuda-cusolver-$CUDA_PKG_VERSION \
-        cuda-cublas-$CUDA_PKG_VERSION \
+        cuda-cublas-8-0=8.0.61.1-1 \
         cuda-cufft-$CUDA_PKG_VERSION \
         cuda-curand-$CUDA_PKG_VERSION \
         cuda-cusparse-$CUDA_PKG_VERSION \
