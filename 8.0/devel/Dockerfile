@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         cuda-nvml-dev-$CUDA_PKG_VERSION \
         cuda-nvgraph-dev-$CUDA_PKG_VERSION \
         cuda-cusolver-dev-$CUDA_PKG_VERSION \
-        cuda-cublas-dev-$CUDA_PKG_VERSION \
+        cuda-cublas-dev-8-0=8.0.61.1-1 \
         cuda-cufft-dev-$CUDA_PKG_VERSION \
         cuda-curand-dev-$CUDA_PKG_VERSION \
         cuda-cusparse-dev-$CUDA_PKG_VERSION \
