@@ -1,4 +1,5 @@
-FROM nvidia/cuda:8.0-runtime-centos6
+ARG repository
+FROM ${repository}:8.0-runtime-centos6
 LABEL maintainer "NVIDIA CORPORATION <cudatools@nvidia.com>"
 
 RUN yum install -y \
