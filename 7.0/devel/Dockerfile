@@ -1,4 +1,5 @@
-FROM nvidia/cuda:7.0-runtime-centos7
+ARG repository
+FROM ${repository}:7.0-runtime-centos7
 LABEL maintainer "NVIDIA CORPORATION <cudatools@nvidia.com>"
 
 RUN yum install -y \

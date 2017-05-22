@@ -1,4 +1,5 @@
-FROM nvidia/cuda:8.0-devel-centos7
+ARG repository
+FROM ${repository}:8.0-devel-centos7
 LABEL maintainer "NVIDIA CORPORATION <cudatools@nvidia.com>"
 
 ENV CUDNN_VERSION 6.0.21
