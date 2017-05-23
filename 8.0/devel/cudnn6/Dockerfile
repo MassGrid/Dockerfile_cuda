@@ -1,4 +1,5 @@
-FROM nvidia/cuda:8.0-devel-ubuntu16.04
+ARG repository
+FROM ${repository}:8.0-devel-ubuntu16.04
 LABEL maintainer "NVIDIA CORPORATION <cudatools@nvidia.com>"
 
 RUN echo "deb http://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1604/x86_64 /" > /etc/apt/sources.list.d/nvidia-ml.list
