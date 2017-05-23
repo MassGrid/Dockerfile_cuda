@@ -1,4 +1,5 @@
-FROM nvidia/cuda:7.5-devel-ubuntu14.04
+ARG repository
+FROM ${repository}:7.5-devel-ubuntu14.04
 LABEL maintainer "NVIDIA CORPORATION <cudatools@nvidia.com>"
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
