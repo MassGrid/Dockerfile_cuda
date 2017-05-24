@@ -115,4 +115,5 @@ v8.0-cudnn6:
 caffe:
     stage: trigger
     script:
+    - apk add --no-cache curl
     - curl -fsS -X POST -F token="${CAFFE_TRIGGER_TOKEN}" -F ref="master" "${CAFFE_TRIGGER_URL}"
