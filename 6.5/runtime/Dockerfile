@@ -10,6 +10,7 @@ RUN NVIDIA_GPGKEY_SUM=d1be581509378368edeec8c1eb2958702feedf3bc3d17011adbf24efac
 
 ENV CUDA_VERSION 6.5.19
 LABEL com.nvidia.cuda.version="${CUDA_VERSION}"
+ENV NVIDIA_CUDA_VERSION $CUDA_VERSION
 
 ENV CUDA_PKG_VERSION 6-5=6.5-19
 RUN apt-get update && apt-get install -y --no-install-recommends \
