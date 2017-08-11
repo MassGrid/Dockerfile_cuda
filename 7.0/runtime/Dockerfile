@@ -9,6 +9,7 @@ COPY cuda.repo /etc/yum.repos.d/cuda.repo
 
 ENV CUDA_VERSION 7.0.28
 LABEL com.nvidia.cuda.version="${CUDA_VERSION}"
+ENV NVIDIA_CUDA_VERSION $CUDA_VERSION
 
 ENV CUDA_PKG_VERSION 7-0-7.0-28
 RUN yum install -y \
