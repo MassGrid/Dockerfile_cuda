@@ -25,9 +25,6 @@ RUN yum install -y \
     ln -s cuda-8.0 /usr/local/cuda && \
     rm -rf /var/cache/yum/*
 
-RUN echo "/usr/local/cuda/lib64" >> /etc/ld.so.conf.d/cuda.conf && \
-    ldconfig
-
 # nvidia-docker 1.0
 LABEL com.nvidia.volumes.needed="nvidia_driver"
 
