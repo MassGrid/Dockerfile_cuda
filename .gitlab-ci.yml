@@ -103,3 +103,8 @@ v9.0:
         NO_OS_SUFFIX: "true"
         LATEST: "true"
     <<: *cuda_base_definition
+
+v9.0-cudnn7:
+    variables:
+        NO_OS_SUFFIX: "true"
+    <<: *cudnn_definition

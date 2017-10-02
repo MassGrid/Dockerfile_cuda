@@ -4,6 +4,8 @@
 - [`9.0-base`, `9.0-base-ubuntu16.04` (*9.0/base/Dockerfile*)](https://gitlab.com/nvidia/cuda/blob/ubuntu16.04/9.0/base/Dockerfile)
 - [`9.0-runtime`, `9.0-runtime-ubuntu16.04` (*9.0/runtime/Dockerfile*)](https://gitlab.com/nvidia/cuda/blob/ubuntu16.04/9.0/runtime/Dockerfile)
 - [`9.0-devel`, `latest`, `9.0-devel-ubuntu16.04` (*9.0/devel/Dockerfile*)](https://gitlab.com/nvidia/cuda/blob/ubuntu16.04/9.0/devel/Dockerfile)
+- [`9.0-cudnn7-runtime`, `9.0-cudnn7-runtime-ubuntu16.04` (*9.0/runtime/cudnn7/Dockerfile*)](https://gitlab.com/nvidia/cuda/blob/ubuntu16.04/9.0/runtime/cudnn7/Dockerfile)
+- [`9.0-cudnn7-devel`, `9.0-cudnn7-devel-ubuntu16.04` (*9.0/devel/cudnn7/Dockerfile*)](https://gitlab.com/nvidia/cuda/blob/ubuntu16.04/9.0/devel/cudnn7/Dockerfile)
 
 ## CUDA 8.0
 - [`8.0-runtime`, `8.0-runtime-ubuntu16.04` (*8.0/runtime/Dockerfile*)](https://gitlab.com/nvidia/cuda/blob/ubuntu16.04/8.0/runtime/Dockerfile)
