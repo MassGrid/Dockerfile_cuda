@@ -4,6 +4,8 @@
 - [`9.0-base-centos6` (*9.0/base/Dockerfile*)](https://gitlab.com/nvidia/cuda/blob/centos6/9.0/base/Dockerfile)
 - [`9.0-runtime-centos6` (*9.0/runtime/Dockerfile*)](https://gitlab.com/nvidia/cuda/blob/centos6/9.0/runtime/Dockerfile)
 - [`9.0-devel-centos6`, (*9.0/devel/Dockerfile*)](https://gitlab.com/nvidia/cuda/blob/centos6/9.0/devel/Dockerfile)
+- [`9.0-cudnn7-runtime-centos6` (*9.0/runtime/cudnn7/Dockerfile*)](https://gitlab.com/nvidia/cuda/blob/centos6/9.0/runtime/cudnn7/Dockerfile)
+- [`9.0-cudnn7-devel-centos6` (*9.0/devel/cudnn7/Dockerfile*)](https://gitlab.com/nvidia/cuda/blob/centos6/9.0/devel/cudnn7/Dockerfile)
 
 ## CUDA 8.0
 - [`8.0-runtime-centos6` (*8.0/runtime/Dockerfile*)](https://gitlab.com/nvidia/cuda/blob/centos6/8.0/runtime/Dockerfile)
