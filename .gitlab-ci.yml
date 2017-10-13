@@ -1,0 +1,35 @@
+image: docker
+
+services:
+    - docker:dind
+
+variables:
+    REPOSITORY: "${CI_PROJECT_NAMESPACE}/${CI_PROJECT_NAME}"
+    OS: "${CI_COMMIT_REF_NAME}"
+
+before_script:
+    - docker login -u "${REGISTRY_USER}" -p "${REGISTRY_TOKEN}"
+
+stages:
+    - cuda
+
+.cuda_template: &cuda_definition
+    stage: cuda
+    script:
+    - VERSION="${CI_JOB_NAME:1}"
+    - docker build --pull -t "${REPOSITORY}:${VERSION}-base-${OS}"
+                   --label "com.nvidia.build.ref=${CI_COMMIT_SHA}"
+                   --label "com.nvidia.build.id=${CI_JOB_ID}"
+                   "${VERSION}/base"
+    - docker build -t "${REPOSITORY}:${VERSION}-runtime-${OS}"
+                   --build-arg "repository=${REPOSITORY}"
+                   --label "com.nvidia.build.ref=${CI_COMMIT_SHA}"
+                   --label "com.nvidia.build.id=${CI_JOB_ID}"
+                   "${VERSION}/runtime"
+    - docker build -t "${REPOSITORY}:${VERSION}-devel-${OS}"
+                   --build-arg "repository=${REPOSITORY}"
+                   "${VERSION}/devel"
+    - docker push "${REPOSITORY}"
+
+v9.0:
+    <<: *cuda_definition
