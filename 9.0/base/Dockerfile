@@ -8,8 +8,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends curl ca-certifi
     rm -rf /var/lib/apt/lists/*
 
 ENV CUDA_VERSION 9.0.176
-LABEL com.nvidia.cuda.version="${CUDA_VERSION}"
-ENV NVIDIA_CUDA_VERSION $CUDA_VERSION
 
 ENV CUDA_PKG_VERSION 9-0=$CUDA_VERSION-1
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -19,6 +17,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 # nvidia-docker 1.0
 LABEL com.nvidia.volumes.needed="nvidia_driver"
+LABEL com.nvidia.cuda.version="${CUDA_VERSION}"
 
 RUN echo "/usr/local/nvidia/lib" >> /etc/ld.so.conf.d/nvidia.conf && \
     echo "/usr/local/nvidia/lib64" >> /etc/ld.so.conf.d/nvidia.conf
@@ -29,3 +28,4 @@ ENV LD_LIBRARY_PATH /usr/local/nvidia/lib:/usr/local/nvidia/lib64
 # nvidia-container-runtime
 ENV NVIDIA_VISIBLE_DEVICES all
 ENV NVIDIA_DRIVER_CAPABILITIES compute,utility
+ENV NVIDIA_REQUIRE_CUDA "cuda>=9.0"
