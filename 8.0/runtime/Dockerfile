@@ -9,8 +9,6 @@ RUN NVIDIA_GPGKEY_SUM=d1be581509378368edeec8c1eb2958702feedf3bc3d17011adbf24efac
     echo "deb http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64 /" > /etc/apt/sources.list.d/cuda.list
 
 ENV CUDA_VERSION 8.0.61
-LABEL com.nvidia.cuda.version="${CUDA_VERSION}"
-ENV NVIDIA_CUDA_VERSION $CUDA_VERSION
 
 ENV CUDA_PKG_VERSION 8-0=$CUDA_VERSION-1
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -28,6 +26,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 # nvidia-docker 1.0
 LABEL com.nvidia.volumes.needed="nvidia_driver"
+LABEL com.nvidia.cuda.version="${CUDA_VERSION}"
 
 RUN echo "/usr/local/nvidia/lib" >> /etc/ld.so.conf.d/nvidia.conf && \
     echo "/usr/local/nvidia/lib64" >> /etc/ld.so.conf.d/nvidia.conf
@@ -38,3 +37,4 @@ ENV LD_LIBRARY_PATH /usr/local/nvidia/lib:/usr/local/nvidia/lib64
 # nvidia-container-runtime
 ENV NVIDIA_VISIBLE_DEVICES all
 ENV NVIDIA_DRIVER_CAPABILITIES compute,utility
+ENV NVIDIA_REQUIRE_CUDA "cuda>=8.0"
