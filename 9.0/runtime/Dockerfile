@@ -2,6 +2,9 @@ ARG repository
 FROM ${repository}:9.0-base-ubuntu16.04
 LABEL maintainer "NVIDIA CORPORATION <cudatools@nvidia.com>"
 
+ENV NCCL_VERSION 2.1.2
+
 RUN apt-get update && apt-get install -y --no-install-recommends \
-        cuda-libraries-$CUDA_PKG_VERSION && \
+        cuda-libraries-$CUDA_PKG_VERSION \
+        libnccl2=$NCCL_VERSION-1+cuda9.0 && \
     rm -rf /var/lib/apt/lists/*
