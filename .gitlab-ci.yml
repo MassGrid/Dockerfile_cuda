@@ -108,3 +108,13 @@ v9.0-cudnn7:
     variables:
         NO_OS_SUFFIX: "true"
     <<: *cudnn_definition
+
+v9.1:
+    variables:
+        NO_OS_SUFFIX: "true"
+    <<: *cuda_base_definition
+
+v9.1-cudnn7:
+    variables:
+        NO_OS_SUFFIX: "true"
+    <<: *cudnn_definition
