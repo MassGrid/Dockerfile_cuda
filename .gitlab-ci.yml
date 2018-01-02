@@ -33,3 +33,6 @@ stages:
 
 v9.0:
     <<: *cuda_definition
+
+v9.1:
+    <<: *cuda_definition
