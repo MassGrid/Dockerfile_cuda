@@ -4,7 +4,7 @@ LABEL maintainer "NVIDIA CORPORATION <cudatools@nvidia.com>"
 
 RUN echo "deb http://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1604/x86_64 /" > /etc/apt/sources.list.d/nvidia-ml.list
 
-ENV CUDNN_VERSION 7.1.1.5
+ENV CUDNN_VERSION 7.1.2.21
 LABEL com.nvidia.cudnn.version="${CUDNN_VERSION}"
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
