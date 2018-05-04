@@ -2,7 +2,7 @@ ARG repository
 FROM ${repository}:7.5-runtime-ubuntu14.04
 LABEL maintainer "NVIDIA CORPORATION <cudatools@nvidia.com>"
 
-RUN echo "deb http://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1404/x86_64 /" > /etc/apt/sources.list.d/nvidia-ml.list
+RUN echo "deb https://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1404/x86_64 /" > /etc/apt/sources.list.d/nvidia-ml.list
 
 ENV CUDNN_VERSION 5.1.10
 LABEL com.nvidia.cudnn.version="${CUDNN_VERSION}"
