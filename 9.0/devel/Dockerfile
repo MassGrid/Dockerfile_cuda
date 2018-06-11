@@ -9,4 +9,4 @@ RUN yum install -y \
         cuda-command-line-tools-$CUDA_PKG_VERSION && \
     rm -rf /var/cache/yum/*
 
-ENV LIBRARY_PATH /usr/local/cuda/lib64/stubs:${LIBRARY_PATH}
+ENV LIBRARY_PATH /usr/local/cuda/lib64/stubs

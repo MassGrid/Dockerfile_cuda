@@ -26,4 +26,4 @@ RUN mkdir /tmp/gpu-deployment-kit && cd /tmp/gpu-deployment-kit && \
     rm -rf /tmp/gpu-deployment-kit* && \
     rm -rf /var/cache/yum/*
 
-ENV LIBRARY_PATH /usr/local/cuda/lib64/stubs:${LIBRARY_PATH}
+ENV LIBRARY_PATH /usr/local/cuda/lib64/stubs
