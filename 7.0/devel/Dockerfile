@@ -25,4 +25,4 @@ RUN mkdir /tmp/gpu-deployment-kit && cd /tmp/gpu-deployment-kit && \
     mv usr/src/gdk/nvml/lib/* /usr/local/cuda/lib64/stubs && \
     rm -rf /tmp/gpu-deployment-kit*
 
-ENV LIBRARY_PATH /usr/local/cuda/lib64/stubs:${LIBRARY_PATH}
+ENV LIBRARY_PATH /usr/local/cuda/lib64/stubs
