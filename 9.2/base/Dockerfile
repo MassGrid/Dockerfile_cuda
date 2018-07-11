@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates
     echo "deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64 /" > /etc/apt/sources.list.d/cuda.list && \
     echo "deb https://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1604/x86_64 /" > /etc/apt/sources.list.d/nvidia-ml.list
 
-ENV CUDA_VERSION 9.2.88
+ENV CUDA_VERSION 9.2.148
 
 ENV CUDA_PKG_VERSION 9-2=$CUDA_VERSION-1
 RUN apt-get update && apt-get install -y --no-install-recommends \
