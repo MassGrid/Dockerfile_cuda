@@ -2,13 +2,13 @@ ARG repository
 FROM ${repository}:9.2-devel-centos6
 LABEL maintainer "NVIDIA CORPORATION <cudatools@nvidia.com>"
 
-ENV CUDNN_VERSION 7.1.4.18
+ENV CUDNN_VERSION 7.2.1.38
 LABEL com.nvidia.cudnn.version="${CUDNN_VERSION}"
 
 # cuDNN license: https://developer.nvidia.com/cudnn/license_agreement
-RUN CUDNN_DOWNLOAD_SUM=f875340f812b942408098e4c9807cb4f8bdaea0db7c48613acece10c7c827101 && \
-    curl -fsSL http://developer.download.nvidia.com/compute/redist/cudnn/v7.1.4/cudnn-9.2-linux-x64-v7.1.tgz -O && \
-    echo "$CUDNN_DOWNLOAD_SUM  cudnn-9.2-linux-x64-v7.1.tgz" | sha256sum -c - && \
-    tar --no-same-owner -xzf cudnn-9.2-linux-x64-v7.1.tgz -C /usr/local && \
-    rm cudnn-9.2-linux-x64-v7.1.tgz && \
+RUN CUDNN_DOWNLOAD_SUM=3e78f5f0edbe614b56f00ff2d859c5409d150c87ae6ba3df09f97d537909c2e9 && \
+    curl -fsSL http://developer.download.nvidia.com/compute/redist/cudnn/v7.2.1/cudnn-9.2-linux-x64-v7.2.1.38.tgz -O && \
+    echo "$CUDNN_DOWNLOAD_SUM  cudnn-9.2-linux-x64-v7.2.1.38.tgz" | sha256sum -c - && \
+    tar --no-same-owner -xzf cudnn-9.2-linux-x64-v7.2.1.38.tgz -C /usr/local && \
+    rm cudnn-9.2-linux-x64-v7.2.1.38.tgz && \
     ldconfig
