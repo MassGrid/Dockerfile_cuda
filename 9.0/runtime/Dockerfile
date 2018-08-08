@@ -4,5 +4,5 @@ LABEL maintainer "NVIDIA CORPORATION <cudatools@nvidia.com>"
 
 RUN yum install -y \
         cuda-libraries-$CUDA_PKG_VERSION \
-        cuda-cublas-9-0-9.0.176.3-1 && \
+        cuda-cublas-9-0-9.0.176.4-1 && \
     rm -rf /var/cache/yum/*
