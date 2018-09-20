@@ -1,5 +1,11 @@
 # Ubuntu 14.04 [![build status](https://gitlab.com/nvidia/cuda/badges/ubuntu14.04/build.svg)](https://gitlab.com/nvidia/cuda/commits/ubuntu14.04)
 
+## CUDA 10.0
+- [`10.0-runtime-ubuntu14.04` (*10.0/runtime/Dockerfile*)](https://gitlab.com/nvidia/cuda/blob/ubuntu14.04/10.0/runtime/Dockerfile)
+- [`10.0-devel-ubuntu14.04` (*10.0/devel/Dockerfile*)](https://gitlab.com/nvidia/cuda/blob/ubuntu14.04/10.0/devel/Dockerfile)
+- [`10.0-cudnn7-runtime-ubuntu14.04` (*10.0/runtime/cudnn7/Dockerfile*)](https://gitlab.com/nvidia/cuda/blob/ubuntu14.04/10.0/runtime/cudnn7/Dockerfile)
+- [`10.0-cudnn7-devel-ubuntu14.04` (*10.0/devel/cudnn7/Dockerfile*)](https://gitlab.com/nvidia/cuda/blob/ubuntu14.04/10.0/devel/cudnn7/Dockerfile)
+
 ## CUDA 8.0
 - [`8.0-runtime-ubuntu14.04` (*8.0/runtime/Dockerfile*)](https://gitlab.com/nvidia/cuda/blob/ubuntu14.04/8.0/runtime/Dockerfile)
 - [`8.0-devel-ubuntu14.04` (*8.0/devel/Dockerfile*)](https://gitlab.com/nvidia/cuda/blob/ubuntu14.04/8.0/devel/Dockerfile)
