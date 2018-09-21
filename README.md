@@ -1,5 +1,12 @@
 # Ubuntu 16.04 [![build status](https://gitlab.com/nvidia/cuda/badges/ubuntu16.04/build.svg)](https://gitlab.com/nvidia/cuda/commits/ubuntu16.04)
 
+## CUDA 10.0 (requires nvidia-docker v2)
+- [`10.0-base-ubuntu16.04` (*10.0/base/Dockerfile*)](https://gitlab.com/nvidia/cuda/blob/ubuntu16.04/10.0/base/Dockerfile)
+- [`10.0-runtime-ubuntu16.04` (*10.0/runtime/Dockerfile*)](https://gitlab.com/nvidia/cuda/blob/ubuntu16.04/10.0/runtime/Dockerfile)
+- [`10.0-devel-ubuntu16.04` (*10.0/devel/Dockerfile*)](https://gitlab.com/nvidia/cuda/blob/ubuntu16.04/10.0/devel/Dockerfile)
+- [`10.0-cudnn7-runtime-ubuntu16.04` (*10.0/runtime/cudnn7/Dockerfile*)](https://gitlab.com/nvidia/cuda/blob/ubuntu16.04/10.0/runtime/cudnn7/Dockerfile)
+- [`10.0-cudnn7-devel-ubuntu16.04` (*10.0/devel/cudnn7/Dockerfile*)](https://gitlab.com/nvidia/cuda/blob/ubuntu16.04/10.0/devel/cudnn7/Dockerfile)
+
 ## CUDA 9.2
 - [`9.2-base`, `9.2-base-ubuntu16.04` (*9.2/base/Dockerfile*)](https://gitlab.com/nvidia/cuda/blob/ubuntu16.04/9.2/base/Dockerfile)
 - [`9.2-runtime`, `9.2-runtime-ubuntu16.04` (*9.2/runtime/Dockerfile*)](https://gitlab.com/nvidia/cuda/blob/ubuntu16.04/9.2/runtime/Dockerfile)
@@ -17,7 +24,7 @@
 ## CUDA 9.0
 - [`9.0-base`, `9.0-base-ubuntu16.04` (*9.0/base/Dockerfile*)](https://gitlab.com/nvidia/cuda/blob/ubuntu16.04/9.0/base/Dockerfile)
 - [`9.0-runtime`, `9.0-runtime-ubuntu16.04` (*9.0/runtime/Dockerfile*)](https://gitlab.com/nvidia/cuda/blob/ubuntu16.04/9.0/runtime/Dockerfile)
-- [`9.0-devel`, `latest`, `9.0-devel-ubuntu16.04` (*9.0/devel/Dockerfile*)](https://gitlab.com/nvidia/cuda/blob/ubuntu16.04/9.0/devel/Dockerfile)
+- [`9.0-devel`, `9.0-devel-ubuntu16.04` (*9.0/devel/Dockerfile*)](https://gitlab.com/nvidia/cuda/blob/ubuntu16.04/9.0/devel/Dockerfile)
 - [`9.0-cudnn7-runtime`, `9.0-cudnn7-runtime-ubuntu16.04` (*9.0/runtime/cudnn7/Dockerfile*)](https://gitlab.com/nvidia/cuda/blob/ubuntu16.04/9.0/runtime/cudnn7/Dockerfile)
 - [`9.0-cudnn7-devel`, `9.0-cudnn7-devel-ubuntu16.04` (*9.0/devel/cudnn7/Dockerfile*)](https://gitlab.com/nvidia/cuda/blob/ubuntu16.04/9.0/devel/cudnn7/Dockerfile)
 
