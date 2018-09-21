@@ -124,3 +124,9 @@ v9.2:
 
 v9.2-cudnn7:
     <<: *cudnn_definition
+
+v10.0:
+    <<: *cuda_base_definition
+
+v10.0-cudnn7:
+    <<: *cudnn_definition
