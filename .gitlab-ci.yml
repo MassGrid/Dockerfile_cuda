@@ -86,24 +86,6 @@ stages:
       fi
     - docker push "${REPOSITORY}"
 
-v7.0:
-    <<: *cuda_definition
-
-v7.0-cudnn4:
-    <<: *cudnn_definition
-
-v7.5:
-    <<: *cuda_definition
-
-v7.5-cudnn4:
-    <<: *cudnn_definition
-
-v7.5-cudnn5:
-    <<: *cudnn_definition
-
-v7.5-cudnn6:
-    <<: *cudnn_definition
-
 v8.0:
     <<: *cuda_definition
 
