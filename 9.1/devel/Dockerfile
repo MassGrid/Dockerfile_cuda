@@ -1,6 +1,6 @@
-ARG repository
-FROM ${repository}:9.1-runtime-ubuntu16.04
+FROM massgrid/9.1-runtime-ubuntu16.04
 LABEL maintainer "NVIDIA CORPORATION <cudatools@nvidia.com>"
+LABEL maintainer "MASSGRID CORPORATION <wilbur@massgrid.com>"
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
         cuda-libraries-dev-$CUDA_PKG_VERSION \

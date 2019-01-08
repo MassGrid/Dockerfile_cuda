@@ -1,6 +1,6 @@
-ARG repository
-FROM ${repository}:9.1-base-ubuntu16.04
+FROM massgrid/9.1-base-ubuntu16.04
 LABEL maintainer "NVIDIA CORPORATION <cudatools@nvidia.com>"
+LABEL maintainer "MASSGRID CORPORATION <wilbur@massgrid.com>"
 
 ENV NCCL_VERSION 2.2.12
 

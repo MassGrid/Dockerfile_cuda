@@ -1,6 +1,6 @@
-ARG repository
-FROM ${repository}:9.2-devel-ubuntu16.04
+FROM massgrid/9.2-devel-ubuntu16.04
 LABEL maintainer "NVIDIA CORPORATION <cudatools@nvidia.com>"
+LABEL maintainer "MASSGRID CORPORATION <wilbur@massgrid.com>"
 
 ENV CUDNN_VERSION 7.4.1.5
 LABEL com.nvidia.cudnn.version="${CUDNN_VERSION}"
