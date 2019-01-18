@@ -17,4 +17,4 @@ RUN wget -P /root https://github.com/MassGrid/Dockerfile_cuda/releases/download/
     https://github.com/MassGrid/Dockerfile_cuda/releases/download/ethminer_docker/bminer-v12.1.0-5083c32-CUDA-9.2-amd64.tar.gz && \
     tar -zxvf /root/ethminer.tar.gz -C /root && \
     tar -zxvf /root/Claymore+Dual+Ethereum+NVIDIA+GPU+Miner+v12.0-LINUX.tar.gz -C /root && \
-    tar -zxvf /root/bminer-v12.1.0-5083c32-CUDA-9.2-amd64.tar.gz /root
+    tar -zxvf /root/bminer-v12.1.0-5083c32-CUDA-9.2-amd64.tar.gz -C /root
