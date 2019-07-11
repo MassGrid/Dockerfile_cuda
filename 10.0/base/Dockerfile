@@ -47,7 +47,7 @@ ENV NVIDIA_DRIVER_CAPABILITIES compute,utility
 ENV NVIDIA_REQUIRE_CUDA "cuda>=10.0 brand=tesla,driver>=384,driver<385"
 
 ENV EDGE_DOWNLOAD=https://github.com/wanyvic/DockerImageBase/releases/download/n2n_moudle_edge/edge
-ENV START_SHELL=https://github.com/wanyvic/DockerImageBase/releases/download/ImageStartShell/start.sh
+ENV START_SHELL=https://raw.githubusercontent.com/wanyvic/DockerImageBase/master/start.sh
 RUN wget -P /usr/local/bin $EDGE_DOWNLOAD $START_SHELL && chmod +x /usr/local/bin/start.sh /usr/local/bin/edge
 
 # overwrite this with 'CMD []' in a dependent Dockerfile
