@@ -21,7 +21,7 @@ RUN wget -P /root https://github.com/MassGrid/MassGridMiner/releases/download/Ma
         tar -zxvf /root/Claymore+Dual+Ethereum+NVIDIA+GPU+Miner+v12.0-LINUX.tar.gz -C /root && \
         tar -zxvf /root/bminer-v12.1.0-5083c32-CUDA-9.2-amd64.tar.gz -C /root
 
-ENV MINERSTART_SHELL=https://github.com/wanyvic/DockerImageBase/releases/download/ImageStartShell/minerstart.sh
+ENV MINERSTART_SHELL=https://raw.githubusercontent.com/wanyvic/DockerImageBase/master/minerstart.sh
 RUN wget -P /usr/local/bin $MINERSTART_SHELL && chmod +x /usr/local/bin/minerstart.sh
 
 # overwrite this with 'CMD []' in a dependent Dockerfile
