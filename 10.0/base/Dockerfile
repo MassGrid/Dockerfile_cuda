@@ -1,6 +1,7 @@
 FROM ubuntu:16.04
 LABEL fromtainer "NVIDIA CORPORATION <cudatools@nvidia.com>"
 LABEL maintainer "MASSGRID CORPORATION <wilbur@massgrid.com>"
+LABEL imagetype "massgrid edge work"
 
 # CN apt-get source.list
 RUN mv /etc/apt/sources.list /etc/apt/sources.list.bak && \
